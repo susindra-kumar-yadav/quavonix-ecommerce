@@ -385,6 +385,10 @@ app.put('/api/admin/orders/:id', authenticateJWT, async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.json({ status: 'Quavonix API running' });
+});
+
 app.listen(port, () => {
   console.log(`Backend server listening at http://localhost:${port}`);
 });
